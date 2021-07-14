@@ -21,7 +21,8 @@ app.use("/galeria", require("./routes/dashboard"));
 
 app.use('/teste', require('./routes/teste'))
 
+var port = process.env.PORT || 3000;
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log(`Server is starting on port 5000`);
 });
