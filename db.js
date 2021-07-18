@@ -1,6 +1,9 @@
 require('dotenv').config();
+const spicedPg = require("spiced-pg");
 
-const Pool = require("pg").Pool;
+const pool = spicedPg(process.env.DATABASE_URL);
+
+/*const Pool = require("pg").Pool;
 
 const pool = new Pool({
   user: process.env.user,
@@ -8,6 +11,6 @@ const pool = new Pool({
   host: process.env.host,
   port: process.env.port,
   database: process.env.database
-});
+});*/
 
 module.exports = pool;
