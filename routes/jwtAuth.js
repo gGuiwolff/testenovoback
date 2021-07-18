@@ -31,7 +31,7 @@ router.post("/register", validInfo, async (req, res) => {
    // req.session.name = newUser.rows[0].user_name;
 
 
-    const jwtToken = jwtGenerator(newUser.rows[0].user_id);
+    const jwtToken = jwtGenerator(newUser.rows[0].user_id,newUser.rows[0].user_name);
     console.log('[JWJW]',jwtToken)
 
     return res.json({ jwtToken });
